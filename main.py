@@ -68,7 +68,6 @@ def ddpg(n_episodes=500, max_t=1000):
             rewards = env_info.rewards                               # get the reward        
             dones = env_info.local_done                              # see if episode has finished  
             score += rewards
-            #agent.step(states, actions, rewards, next_states, dones,t)
             for i in range(20) :
                 agent.step(states[i], actions[i], rewards[i], next_states[i], dones[i])
             states = next_states
@@ -93,9 +92,11 @@ def ddpg(n_episodes=500, max_t=1000):
     
 scores = ddpg()
 
+mean_scores = np.mean(scores, axis = 1)
+
 fig = plt.figure()
 ax = fig.add_subplot(111)
-plt.plot(np.arange(1, len(scores)+1), scores)
+plt.plot(np.arange(1, len(scores)+1), mean_scores)
 plt.ylabel('Score')
 plt.xlabel('Episode #')
 plt.show()
