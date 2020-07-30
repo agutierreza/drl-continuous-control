@@ -4,7 +4,7 @@
 
 The learning algorithm used in this project is based on the DDPG algorithm. This algorithm uses two agents concurrently, and actor and a critic. Both agents have a local and a target neural network. Both actor and critic have 2 fully connected layers of 64 and 128 units, a batch normalization layer and ReLU activation functions.
 
-Values of other parameters:
+Values of other DDPG hyperparameters:
 
 - BUFFER_SIZE: int(1e5)
 - BATCH_SIZE: 128
@@ -14,6 +14,8 @@ Values of other parameters:
 - LR_CRITIC: 1e-3
 - WEIGHT_DECAY: 0
 - NUM_AGENTS: 20
+
+Check `model.py` and `agent.py` for details about the neural network architectures and DDPG details respectively.
 
 ## Plot of Rewards
 

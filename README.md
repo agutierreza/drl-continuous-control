@@ -36,7 +36,13 @@ This repository presents solves the problen for a version containing 20 agents. 
 - Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Windows_x86.zip)
 - Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Windows_x86_64.zip)
 
-The code is written in Python. Make sure you have a  `python 3.6` environment with the following dependencies: `PyTorch` and `ml-agents`
+The code is written in Python. Make sure you have a  `python 3.6` environment with the following dependencies: `PyTorch` and `ml-agents`. To make it easier you can create a new conda environment and then clone the DRL Audacity nanodegree repository to install dependencies from there:
+
+```bash
+git clone https://github.com/udacity/deep-reinforcement-learning.git
+cd deep-reinforcement-learning/python
+pip install .
+```
 
 ## Instructions
 
